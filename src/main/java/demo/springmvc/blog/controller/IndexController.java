@@ -25,7 +25,7 @@ public class IndexController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String home(Locale locale, Model model, HttpServletRequest request) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("欢迎回来! The client locale is {}.", locale);
 		model.addAttribute("allPost", this.postService.getAllPost());
 		User loggedInUser = (User)request.getSession().getAttribute("loggedInUser");
 		if( loggedInUser != null ){
