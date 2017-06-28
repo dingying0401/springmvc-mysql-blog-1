@@ -32,8 +32,8 @@ public class UserService {
 		this.jdbcTemplate.update(
 				"INSERT INTO user (username,password,fullname) VALUES (?,?,?)",
 				user.getUsername(), user.getPassword(), user.getFullname());
-		user.setId(this.jdbcTemplate.queryForInt(
-				"select id from user where username = ?", user.getUsername()));
+//		user.setId(this.jdbcTemplate.queryForInt(
+//				"select id from user where username = ?", user.getUsername()));
 	}
 
 	public User checkUser(User loginUser) {
